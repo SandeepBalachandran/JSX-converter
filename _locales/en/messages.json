@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "JSX Converter",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "This extension used to convert html into jsx ",
+    "description": "This extension used to convert html into jsx "
+  },
+  "checkbox_label": {
+    "message": "Include react arrow function",
+    "description": "checkbox label text"
+  }
+}
