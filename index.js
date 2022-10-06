@@ -8,11 +8,13 @@ const onFocusOut = (value) => {
 }
 
 const input = document.getElementById('input')
+const output = document.getElementById('output')
+const copy = document.getElementById('copy')
+
+
 input.addEventListener('focusout', ($event) => onFocusOut($event.target.value))
 
-const output = document.getElementById('output')
 
-const copy = document.getElementById('copy')
 copy.addEventListener('click', () => {
     output.select();
     document.execCommand("copy");
@@ -27,7 +29,6 @@ copy.addEventListener('click', () => {
 
 
 const onFunctionNeed = (event) => {
-    console.log(input.value)
     if (event.currentTarget.checked && input.value !== '') {
         const functionTemplate = `import React from 'react'
 

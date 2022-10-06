@@ -12,6 +12,11 @@
       "js": ["index.js"]
     }
   ],
+  "icons": {
+    "16": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
  
   "action": {
     "default_title": "convert HTML into JSX",
