@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="assets/favicon.ico" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,22 +12,35 @@
   <body>
     <div class="container flex flex-col">
       <header class="flex flex-row content-center" data-aos="fade-down">
-        <div>
+        <div class="flex">
+          <!-- <img src="./assets/logo.png" width="50"/> -->
           <h1>JSX converter</h1>
         </div>
+        <button class="navbar-toggler mobile-menu-btn closed" type="button">
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarCover">
+          <ul class="navbar flex flex-row">
+            <li>Home</li>
+            <li>Features</li>
+            <li>Pricing</li>
+          </ul>
+        </div>
         <div>
-          <a href="https://github.com/SandeepBalachandran/JSX-converter" target="_blank"><div class="common-btn" >Get It Now</div></a>
+          <a href="https://github.com/SandeepBalachandran/JSX-converter" target="_blank"><div class="common-btn">Get It Now</div></a>
         </div>
       </header>
       <section class="hero flex flex-col">
-        <article class="flex flex-col justify-center " data-aos="flip-left">
+        <article class="flex flex-col justify-center" data-aos="flip-left">
           <h1>
             A browser extension that <br />
             makes your life easier
           </h1>
           <p>An open source project</p>
-          <div class="btn-container" >
-            <a href="https://github.com/SandeepBalachandran/JSX-converter" target="_blank"><div class="common-btn" >Get It Now</div></a>
+          <div class="btn-container">
+            <a href="https://github.com/SandeepBalachandran/JSX-converter" target="_blank"><div class="common-btn">Get It Now</div></a>
           </div>
         </article>
         <article class="image-container" data-aos="flip-right">
@@ -35,6 +49,7 @@
       </section>
     </div>
     <script src="js/aos.js"></script>
+    <script src="js/script.js"></script>
     <script>
       AOS.init();
     </script>
