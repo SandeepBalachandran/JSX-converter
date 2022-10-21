@@ -1,10 +1,6 @@
 /* @import "./fontawesome.min.css";
 @import "./regular.min.css"; */
 
-:root {
-  --primary: #03bcfc;
-  --background: #ffffff;
-}
 
 * {
   box-sizing: border-box;
@@ -22,15 +18,16 @@ a {
 .container {
   width: 400px;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
-  background-color: #ecf0f3;
+  background-color: var(--body-bg);
   /* padding: 1rem; */
 }
 .container header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* padding: 1rem 0; */
-  margin: 1rem;
+  margin: 1rem 2rem 1rem 2rem;
   color: var(--primary);
 }
 .container main {
@@ -55,7 +52,7 @@ a {
   margin-right: 2rem;
 }
 
-.container main article.copy-container button {
+.container main article.copy-container div {
   width: 50%;
   padding: 0.8rem;
   cursor: pointer;
@@ -64,6 +61,7 @@ a {
   border-color: white;
   color: white;
   font-weight: bolder;
+  text-align: center;
 }
 
 .container main article textarea {
@@ -73,12 +71,15 @@ a {
   resize: vertical;
   border-color: var(--primary);
   width: 100%;
+  background-color: var(--background);
+  color:var(--field-color)
 }
 .container footer {
-  margin: 1rem;
+  /* margin: 1rem; */
 }
 /* The checkbox-container */
 .checkbox-container {
+  color: var(--field-color);
   display: block;
   position: relative;
   padding-left: 30px;
@@ -144,4 +145,77 @@ a {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* Theme switcher styles */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: black url("https://i.ibb.co/FxzBYR9/night.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url("https://i.ibb.co/7JfqXxB/sunny.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
