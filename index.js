@@ -59,10 +59,11 @@ const copy = document.getElementById('copy')
 const themeToggler = document.getElementById('themeSlider')
 
 
-input.addEventListener('focusout', ($event) => onFocusOut($event.target.value))
+input && input.addEventListener('focusout', ($event) => onFocusOut($event.target.value))
 
 
-copy.addEventListener('click', () => {
+
+copy && copy.addEventListener('click', () => {
     output.select();
     document.execCommand("copy");
     output.blur()
@@ -74,7 +75,8 @@ copy.addEventListener('click', () => {
     }, 1000);
 })
 
-themeToggler.addEventListener('change', ($event) => {
+
+themeToggler && themeToggler.addEventListener('change', ($event) => {
     toggleTheme($event.currentTarget.checked)
 })
 
@@ -111,6 +113,6 @@ export default functionName`;
 
 
 const functionCheck = document.getElementById('functionCheck')
-functionCheck.addEventListener('change', onFunctionNeed)
+functionCheck?.addEventListener('change', onFunctionNeed)
 
 
