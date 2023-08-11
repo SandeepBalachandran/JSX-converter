@@ -6,12 +6,6 @@
   "description": "__MSG_appDesc__",
   "short_name": "JSXC",
   "permissions": ["storage"],
-  "content_scripts": [
-    {
-      "matches": ["https://*/*"],
-      "js": ["index.js"]
-    }
-  ],
   "icons": {
     "16": "assets/logo.png",
     "48": "assets/logo.png",
@@ -22,11 +16,5 @@
     "default_title": "convert HTML into JSX",
     "default_popup": "popup.html"
    
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["css/fontawesome.min.css", "css/regular.min.css", "webfonts/fa-regular-400.woff2"],
-      "matches": ["https://*/*"]
-    }
-  ]
+  }
 }
