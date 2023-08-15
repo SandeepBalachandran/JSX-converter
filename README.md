@@ -11,20 +11,15 @@
 </div>
 
 ### How to use
-Extension is not yet published to chrome webstore. Follow the below steps to run it locally.
+You can get the extension for Google chrome from store  👉 [JSX Converter](https://chrome.google.com/webstore/detail/jsx-converter/jnacehohfoodlipnifipgfabkbdmknmf)
   
-* Clone the repo
-* Go to google chrome
-* Type `chrome://extensions/` in the url
-* click on `Load unpacked`
-* choose the directory contains the files
-* Enjoy
+
 
 ### For development
 
 - `git clone https://github.com/SandeepBalachandran/JSX-converter`
-- `npm i`
-- `npm run dev`
+- `popup.html` - Contains the template of the extension
+- `index.js` - Contains the script of the extension
 
 ## Help Improve
 
