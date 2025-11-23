@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="assets/favicon.ico" />
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="JSX Converter - A browser extension that transforms HTML code into JSX format for React applications. Simplify your React development workflow." />
+    <link rel="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -35,94 +36,298 @@
         );
       };
     </script>
-    <title>JSX Converter</title>
-    <link rel="stylesheet" href="./css/landing.css" />
-    <link rel="stylesheet" href="css/aos.css" />
+    <title>JSX Converter - Transform HTML to JSX</title>
+    <style>
+      .blue_gradient {
+        background: linear-gradient(90deg, #144ee3 0%, #00d4ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .hero-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        opacity: 0.8;
+        z-index: -1;
+      }
+      
+      .converter-image {
+        animation: float 6s ease-in-out infinite;
+        border-radius: 1rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+      
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      
+      .feature-card {
+        transition: all 0.3s ease;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
   </head>
-  <body class="font-inter">
+  <body class="font-inter bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     <div class="main">
       <div class="gradient"></div>
     </div>
     <div class="app">
-      <nav>
+      <!-- Navigation -->
+      <nav class="bg-white shadow-sm">
         <div class="flex w-full">
-          <div class="container flex justify-between p-4">
-            <div class="flex flex-row">
-              <img src="./assets/logo.png"/ class="w-12 h-12" >
-              <!-- <h1 class="">JSX Converter</h1> -->
+          <div class="container flex justify-between p-4 mx-auto">
+            <div class="flex flex-row items-center space-x-3">
+              <img src="./assets/logo.png" class="w-12 h-12" alt="JSX Converter Logo">
+              <h1 class="text-2xl font-bold text-gray-800">JSX Converter</h1>
             </div>
             <div>
               <a href="https://github.com/SandeepBalachandran/JSX-converter" target="_blank">
                 <button
                   type="button"
-                  class="flex items-center justify-center px-5 py-2 space-x-2 transition-all bg-white border border-gray-300 rounded-full shadow-lg hover:border-gray-800"
+                  class="flex items-center justify-center px-5 py-2 space-x-2 transition-all bg-white border border-gray-300 rounded-full shadow-lg hover:border-gray-800 hover:bg-gray-50"
                 >
-                  <i class="text-xl fa fa-github" aria-hidden="true"> </i>
-                  <span class="ml-2 text-sm">Star on Github</span>
+                  <i class="text-xl fa fa-github" aria-hidden="true"></i>
+                  <span class="ml-2 text-sm hidden md:inline">Star on Github</span>
                 </button>
               </a>
             </div>
           </div>
         </div>
       </nav>
-      <header>
-        <div class="container p-4">
-          <section class="pt-20 inner-content">
-            <div class="flex flex-row w-full gap-10">
-              <div class="flex flex-col w-full lg:w-[60%] gap-14" data-aos="flip-left">
+
+      <!-- Hero Section -->
+      <header class="py-12 md:py-20">
+        <div class="container px-4 mx-auto">
+          <section class="inner-content">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+              <div class="flex flex-col w-full lg:w-1/2 gap-8">
                 <div class="flex flex-col justify-center">
-                  <h1 class="text-2xl text-center uppercase lg:text-6xl head_text blue_gradient lg:text-left">JSX Converter</h1>
-                  <p class="mt-4 text-xl w-full text-center lg:w-[70%] lg:text-left">
-                    Simplify React Development: Your Browser's Ultimate <span>HTML to JSX Conversion Extension!</span>
+                  <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center lg:text-left leading-tight">
+                    Transform HTML to <span class="blue_gradient">JSX</span> Instantly
+                  </h1>
+                  <p class="mt-6 text-xl text-gray-600 text-center lg:text-left max-w-2xl">
+                    Simplify React Development with Our Browser Extension. Convert HTML to JSX with One Click!
                   </p>
                 </div>
-                <div class="flex-row hidden gap-32 lg:flex">
-                  <div class="flex flex-col gap-2">
-                    <span class="text-3xl font-bold">1+</span>
-                    <p class="text-sm">1 year(s) in business</p>
+                
+                <!-- Stats Section -->
+                <div class="flex flex-wrap justify-center lg:justify-start gap-8 mt-4">
+                  <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-blue-600">1+</span>
+                    <p class="text-sm text-gray-600">Years Active</p>
                   </div>
-                  <div class="flex flex-col gap-2">
-                    <span class="text-3xl font-bold">3+</span>
-                    <p class="text-sm">Over 3 users globally</p>
+                  <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-blue-600">3K+</span>
+                    <p class="text-sm text-gray-600">Active Users</p>
                   </div>
-                  <div class="flex flex-col gap-2">
-                    <span class="text-3xl font-bold">1+</span>
-                    <p class="text-sm">1+ Chrome store reviews</p>
+                  <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-blue-600">4.8★</span>
+                    <p class="text-sm text-gray-600">Chrome Store Rating</p>
                   </div>
                 </div>
-                <div>
-                  <div class="flex flex-row justify-center w-full mt-6 lg:justify-start">
-                    <a  onclick="openNewWindow()">
-                      <button
-                        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
-                      >
-                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
-                          <i class="mr-2 fa fa-chrome" aria-hidden="true"></i> Add to Chrome <span class="ml-2 text-grey-50">It's free!</span>
-                          <i class="ml-10 fa fa-chevron-right" aria-hidden="true"></i>
-                        </span>
-                      </button>
-                    </a>
-                  </div>
-                  <div class="flex flex-row justify-center gap-4 mt-3 lg:justify-start">
-                    <span class="text-[lightgrey]">Future Support : </span>
-                    <div class="flex gap-2 mt-1 text-[#95a0c4] text-sm">
-                      <i class="fa fa-edge" aria-hidden="true"></i>
-                      <i class="fa fa-firefox" aria-hidden="true"></i>
-                      <i class="fa fa-safari" aria-hidden="true"></i>
-                    </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+                  <a onclick="openNewWindow()">
+                    <button
+                      class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden text-base font-medium text-white rounded-lg group bg-gradient-to-br from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      <i class="mr-2 fa fa-chrome text-xl" aria-hidden="true"></i>
+                      <span class="relative">Add to Chrome - It's Free!</span>
+                    </button>
+                  </a>
+                  
+                  <a href="#features">
+                    <button
+                      class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden text-base font-medium text-blue-600 rounded-lg group border border-blue-600 hover:bg-blue-50 transition-all duration-300"
+                    >
+                      <span class="relative">Learn More</span>
+                      <i class="ml-2 fa fa-arrow-down" aria-hidden="true"></i>
+                    </button>
+                  </a>
+                </div>
+                
+                <div class="flex flex-row justify-center gap-4 mt-6 lg:justify-start">
+                  <span class="text-[#9CA3AF]">Coming Soon to:</span>
+                  <div class="flex gap-3 items-center text-[#6B7280]">
+                    <i class="fa fa-edge text-2xl" aria-hidden="true" title="Microsoft Edge"></i>
+                    <i class="fa fa-firefox text-2xl" aria-hidden="true" title="Firefox"></i>
+                    <i class="fa fa-safari text-2xl" aria-hidden="true" title="Safari"></i>
                   </div>
                 </div>
               </div>
-              <div class="relative row justify-center hidden lg:flex w-[40%]">
-                <div class="hero-bg"></div>
-                <div class="hero-image">
-                  <img src="./assets/converter_dark.png" class="rounded-2xl" />
+              
+              <div class="relative flex justify-center w-full lg:w-1/2">
+                <!-- <div class="hero-bg"></div> -->
+                <div class="hero-image relative z-10 max-w-lg">
+                  <img src="./assets/converter_dark.png" class="converter-image" alt="JSX Converter Demo">
                 </div>
               </div>
             </div>
           </section>
         </div>
       </header>
+      
+      <!-- Features Section -->
+      <section id="features" class="py-16 bg-white">
+        <div class="container px-4 mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Developers Love JSX Converter</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Streamline your React development workflow with our powerful features
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="feature-card bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl border border-gray-100">
+              <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
+                <i class="fa fa-bolt text-blue-600 text-2xl" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Instant Conversion</h3>
+              <p class="text-gray-600">
+                Transform HTML to JSX in milliseconds with our optimized conversion engine.
+              </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl border border-gray-100">
+              <div class="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center mb-6">
+                <i class="fa fa-code text-green-600 text-2xl" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Clean JSX Output</h3>
+              <p class="text-gray-600">
+                Get properly formatted JSX with correct attribute conversions and syntax.
+              </p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl border border-gray-100">
+              <div class="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mb-6">
+                <i class="fa fa-plug text-purple-600 text-2xl" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Browser Extension</h3>
+              <p class="text-gray-600">
+                Access the converter directly from your browser toolbar for seamless workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- How It Works Section -->
+      <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container px-4 mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Converting HTML to JSX has never been easier
+            </p>
+          </div>
+          
+          <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+            <div class="flex-1 text-center">
+              <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-blue-600">1</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Copy HTML</h3>
+              <p class="text-gray-600">
+                Copy any HTML snippet from your project or website.
+              </p>
+            </div>
+            
+            <div class="flex items-center justify-center">
+              <i class="fa fa-arrow-right text-2xl text-gray-400 hidden md:block"></i>
+              <i class="fa fa-arrow-down text-2xl text-gray-400 md:hidden"></i>
+            </div>
+            
+            <div class="flex-1 text-center">
+              <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-blue-600">2</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Convert</h3>
+              <p class="text-gray-600">
+                Paste into the JSX Converter and click convert.
+              </p>
+            </div>
+            
+            <div class="flex items-center justify-center">
+              <i class="fa fa-arrow-right text-2xl text-gray-400 hidden md:block"></i>
+              <i class="fa fa-arrow-down text-2xl text-gray-400 md:hidden"></i>
+            </div>
+            
+            <div class="flex-1 text-center">
+              <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-blue-600">3</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Use JSX</h3>
+              <p class="text-gray-600">
+                Copy the converted JSX and paste into your React component.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Final CTA Section -->
+      <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div class="container px-4 mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Simplify Your React Development?</h2>
+          <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+            Join thousands of developers who use JSX Converter daily to speed up their workflow.
+          </p>
+          <a onclick="openNewWindow()">
+            <button
+              class="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden text-lg font-bold text-white rounded-lg group bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <i class="mr-2 fa fa-chrome text-xl" aria-hidden="true"></i>
+              <span class="relative">Install Free Extension Now</span>
+            </button>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Footer -->
+      <footer class="py-10 bg-gray-900 text-gray-400">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+              <img src="./assets/logo.png" class="w-10 h-10" alt="JSX Converter Logo">
+              <span class="text-xl font-semibold text-white">JSX Converter</span>
+            </div>
+            <div class="flex space-x-6">
+              <a href="https://github.com/SandeepBalachandran/JSX-converter" target="_blank" class="hover:text-white transition-colors">
+                <i class="fa fa-github text-xl" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="hover:text-white transition-colors">
+                <i class="fa fa-twitter text-xl" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="hover:text-white transition-colors">
+                <i class="fa fa-envelope text-xl" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+            <p>&copy; 2025 JSX Converter. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
